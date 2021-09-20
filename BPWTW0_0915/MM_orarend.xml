@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<orarend>
+    <kedd>
+        <ora id="1" tipus="gyakorlati">
+            <targy nev="testneveles"/>
+            <idopont>
+                <nap nev="kedd"/>
+                <tol ido="1100"/>
+                <ig ido="1200"/>
+            </idopont>
+            <helyszin nev="E4" terem="edzoterem"/>
+            <oktato nev="Fellinger Szilvia"/>
+            <szak nev="Programtervező informatikus"/>
+        </ora>
+        <ora id="2" tipus="elmeleti">
+            <targy nev="Adatkezeles XML-ben"/>
+            <idopont>
+                <nap nev="kedd"/>
+                <tol ido="1200"/>
+                <ig ido="1400"/>
+            </idopont>
+            <helyszin nev="A2" terem="I"/>
+            <oktato nev="Bednarik László"/>
+            <szak nev="Programtervező informatikus"/>
+        </ora>
+    </kedd>
+    <szerda>
+    <ora id="2" tipus="gyakorlati">
+        <targy nev="Adatkezeles XML-ben"/>
+        <idopont>
+            <nap nev="szerda"/>
+            <tol ido="1000"/>
+            <ig ido="1200"/>
+        </idopont>
+        <helyszin nev="Inf" terem="202"/>
+        <oktato nev="Bednarik Laszlo"/>
+        <szak nev="Programtervező informatikus"/>
+    </ora>
+    <ora id="3" tipus="elmeleti">
+        <targy nev="Vállalati információs rendszerek fejlesztése"/>
+        <idopont>
+            <nap nev="szerda"/>
+            <tol ido="1600"/>
+            <ig ido="1800"/>
+        </idopont>
+        <helyszin nev="Inf" terem="103"/>
+        <oktato nev="Dr. Sasvári Péter László"/>
+        <szak nev="Programtervező informatikus"/>
+    </ora>
+    <ora id="3" tipus="gyakorlati">
+        <targy nev="Vállalati információs rendszerek fejlesztése"/>
+        <idopont>
+            <nap nev="szerda"/>
+            <tol ido="1800"/>
+            <ig ido="2000"/>
+        </idopont>
+        <helyszin nev="Inf" terem="103"/>
+        <oktato nev="Dr. Sasvári Péter László"/>
+        <szak nev="Programtervező informatikus"/>
+    </ora>
+    </szerda>
+</orarend>
