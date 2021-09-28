@@ -2,58 +2,58 @@
 
 <orarend>
     <ora id="1" tipus="gyakorlati">
-        <targy nev="testneveles"/>
+        <targy>Testneveles</targy> 
         <idopont>
-            <nap nev="kedd"/>
-            <tol ido="1100"/>
-            <ig ido="1200"/>
+            <nap>kedd</nap>
+            <tol>1100</tol>
+            <ig>1200</ig>
         </idopont>
-        <helyszin nev="E4" terem="edzoterem"/>
-        <oktato nev="Fellinger Szilvia"/>
-        <szak nev="Programtervező informatikus"/>
+        <helyszin>E4/edzoterem</helyszin>
+        <oktato>Fellinger Szilvia</oktato>
+        <szak>Programtervező informatikus</szak>
     </ora>
     <ora id="2" tipus="elmeleti">
-        <targy nev="Adatkezeles XML-ben"/>
+        <targy>Adatkezeles XML-ben</targy> 
         <idopont>
-            <nap nev="kedd"/>
-            <tol ido="1200"/>
-            <ig ido="1400"/>
+            <nap>kedd</nap>
+            <tol>1200</tol>
+            <ig>1400</ig>
         </idopont>
-        <helyszin nev="A2" terem="I"/>
-        <oktato nev="Bednarik László"/>
-        <szak nev="Programtervező informatikus"/>
+        <helyszin>A2/I</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező informatikus</szak>
     </ora>
     <ora id="2" tipus="gyakorlati">
-        <targy nev="Adatkezeles XML-ben"/>
+        <targy>Adatkezeles XML-ben</targy> 
         <idopont>
-            <nap nev="szerda"/>
-            <tol ido="1000"/>
-            <ig ido="1200"/>
+            <nap>szerda</nap>
+            <tol>1000</tol>
+            <ig>1200</ig>
         </idopont>
-        <helyszin nev="Inf" terem="202"/>
-        <oktato nev="Bednarik Laszlo"/>
-        <szak nev="Programtervező informatikus"/>
+        <helyszin>Inf/202</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező informatikus</szak>
     </ora>
     <ora id="3" tipus="elmeleti">
-        <targy nev="Vállalati információs rendszerek fejlesztése"/>
+        <targy>Vállalati információs rendszerek fejlesztése</targy>
         <idopont>
-            <nap nev="szerda"/>
-            <tol ido="1600"/>
-            <ig ido="1800"/>
+            <nap>szerda</nap>
+            <tol>1600</tol>
+            <ig>1800</ig>
         </idopont>
-        <helyszin nev="Inf" terem="103"/>
-        <oktato nev="Dr. Sasvári Péter László"/>
-        <szak nev="Programtervező informatikus"/>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Sasvári Péter László</oktato>
+        <szak>Programtervező informatikus</szak>
     </ora>
     <ora id="3" tipus="gyakorlati">
-        <targy nev="Vállalati információs rendszerek fejlesztése"/>
+        <targy>Vállalati információs rendszerek fejlesztése</targy>
         <idopont>
-            <nap nev="szerda"/>
-            <tol ido="1800"/>
-            <ig ido="2000"/>
+            <nap>szerda</nap>
+            <tol>1800</tol>
+            <ig>2000</ig>
         </idopont>
-        <helyszin nev="Inf" terem="103"/>
-        <oktato nev="Dr. Sasvári Péter László"/>
-        <szak nev="Programtervező informatikus"/>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Sasvári Péter László</oktato>
+        <szak>Programtervező informatikus</szak>
     </ora>
 </orarend>
