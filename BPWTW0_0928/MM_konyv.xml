@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konyvek>
+	<konyv id="1">
+	<cim>Programozás</cim>
+	<kiadasi_ev>2014</kiadasi_ev>
+	<kiado>Konyv Kiado</kiado>
+	<szerzo>Kis István</szerzo>
+	<szerzo>Molnár Károly</szerzo>
+	</konyv>
+	<konyv id="2">
+	<cim>O.O.P.</cim>
+	<kiadasi_ev>2011</kiadasi_ev>
+	<kiado>Konyv Kiado</kiado>
+	<szerzo>Nagy Antal</szerzo>
+	</konyv>
+	<konyv id="3">
+	<cim>XML</cim>
+	<kiadasi_ev>2012</kiadasi_ev>
+	<kiado>Konyv Kiado</kiado>
+	<szerzo>Nyáradi Máté</szerzo>
+	</konyv>
+</konyvek>
