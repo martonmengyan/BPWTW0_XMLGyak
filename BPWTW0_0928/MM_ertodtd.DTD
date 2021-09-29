@@ -1,0 +1,26 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT ermodell (A, B, C, A_B)>
+<!ELEMENT A (Ab, Ac)>
+<!ATTLIST A Aa CDATA #REQUIRED>
+
+<!ELEMENT Ab (Abx, Aby)>
+<!ELEMENT Abx (#PCDATA)>
+<!ELEMENT Aby (#PCDATA)>
+
+<!ELEMENT Ac (Acd, Ace)>
+<!ELEMENT Acd (#PCDATA)>
+<!ELEMENT Ace (#PCDATA)>
+
+<!ELEMENT B (Bb)>
+<!ATTLIST B Ba CDATA #REQUIRED>
+<!ELEMENT Bb (Bbx, Bby)>
+<!ELEMENT Bbx (#PCDATA)>
+<!ELEMENT Bby (#PCDATA)>
+
+<!ELEMENT C (Cb)>
+<!ATTLIST C Ca CDATA #REQUIRED>
+<!ELEMENT Cb (#PCDATA)>
+
+<!ELEMENT A_B (A_Bc)>
+<!ELEMENT A_Bc (#PCDATA)>

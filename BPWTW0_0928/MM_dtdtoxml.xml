@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ermodell SYSTEM "MM_ertodtd.DTD">
+
+<ermodell>
+	<A Aa="1">
+		<Ab>
+			<Abx></Abx>
+			<Aby></Aby>
+		</Ab>
+		<Ac>
+			<Acd></Acd>
+			<Ace></Ace>
+		</Ac>
+	</A>
+	<B Ba="2">
+		<Bb>
+			<Bbx></Bbx>
+			<Bby></Bby>
+		</Bb>
+	</B>
+	<C Ca="3">
+		<Cb></Cb>
+	</C>
+	<A_B>
+		<A_Bc></A_Bc>
+	</A_B>
+</ermodell>

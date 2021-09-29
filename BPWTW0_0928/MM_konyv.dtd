@@ -1,7 +1,11 @@
-<!DOCTYPE konyvek [
-	<!ELEMENT konyvek (cim, kiadasi_ev, kiado, szerzo+)>
-	<!ATTLIST konyv id ID #FIXED>
-	<!ELEMENT cim (#PCDATA)>
-	<!ELEMENT kiado (#PCDATA)>
-	<!ELEMENT szerzo (#PCDATA)>
-]>
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT konyvek (konyv*)>
+
+<!ELEMENT konyv (cim, kiadasi_ev, kiado, szerzo+)>
+<!ATTLIST konyv id CDATA #REQUIRED>
+
+<!ELEMENT kiadasi_ev (#PCDATA)>
+<!ELEMENT cim (#PCDATA)>
+<!ELEMENT kiado (#PCDATA)>
+<!ELEMENT szerzo (#PCDATA)>
