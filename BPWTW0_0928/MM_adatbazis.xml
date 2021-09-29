@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE adatbazis [
+<!ELEMENT adatbazis (dolgozo+)>
+<!ELEMENT dolgozo (nev, fizetes)>
+<!ATTLIST dolgozo kod CDATA #REQUIRED>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT fizetes (#PCDATA)>
+]>
+
+<adatbazis>
+	<dolgozo kod="1">
+		<nev></nev>
+		<fizetes></fizetes>
+	</dolgozo>
+</adatbazis>

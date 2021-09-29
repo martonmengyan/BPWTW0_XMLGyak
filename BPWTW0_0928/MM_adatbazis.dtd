@@ -1,0 +1,7 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT adatbazis (dolgozo+)>
+<!ELEMENT dolgozo (nev, fizetes)>
+<!ATTLIST dolgozo kod CDATA #REQUIRED>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT fizetes (#PCDATA)>
