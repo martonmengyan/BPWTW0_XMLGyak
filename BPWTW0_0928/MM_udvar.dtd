@@ -5,7 +5,7 @@
 <!ELEMENT gazda EMPTY>
 <!ELEMENT kutya (#PCDATA)>
 <!ATTLIST kutya nev CDATA #REQUIRED>
-<!ATTLIST kakas id IDREF #REQUIRED>
+<!ATTLIST kakas id ID #REQUIRED>
 <!ELEMENT kakas EMPTY>
 <!ATTLIST tyuk ferj IDREF #IMPLIED>
 <!ELEMENT tyuk EMPTY>
