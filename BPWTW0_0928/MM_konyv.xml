@@ -4,20 +4,20 @@
 <konyvek>
 	<konyv id="1">
 	<cim>Programozás</cim>
-	<kiadasi_ev>ASD</kiadasi_ev>
+	<kiadasi_ev>2019</kiadasi_ev>
 	<kiado>Konyv Kiado</kiado>
 	<szerzo>Kis István</szerzo>
 	<szerzo>Molnár Károly</szerzo>
 	</konyv>
 	<konyv id="2">
 	<cim>O.O.P.</cim>
-	<kiadasi_ev>ASD</kiadasi_ev>
+	<kiadasi_ev>2009</kiadasi_ev>
 	<kiado>Konyv Kiado</kiado>
 	<szerzo>Nagy Antal</szerzo>
 	</konyv>
 	<konyv id="3">
 	<cim>XML</cim>
-	<kiadasi_ev>ASD</kiadasi_ev>
+	<kiadasi_ev>1998</kiadasi_ev>
 	<kiado>Konyv Kiado</kiado>
 	<szerzo>Nyáradi Máté</szerzo>
 	</konyv>
