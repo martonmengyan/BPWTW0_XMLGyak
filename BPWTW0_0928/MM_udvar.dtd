@@ -1,0 +1,16 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT udvar (gazda, kutya, kakas, tyuk, diszno)>
+<!ATTLIST gazda nev CDATA #REQUIRED>
+<!ELEMENT gazda EMPTY>
+<!ELEMENT kutya (#PCDATA)>
+<!ATTLIST kutya nev CDATA #REQUIRED>
+<!ATTLIST kakas id IDREF #REQUIRED>
+<!ELEMENT kakas EMPTY>
+<!ATTLIST tyuk ferj IDREF #IMPLIED>
+<!ELEMENT tyuk EMPTY>
+<!ELEMENT diszno (#PCDATA)>
+<!ATTLIST diszno nev CDATA #REQUIRED>
+
+
+
