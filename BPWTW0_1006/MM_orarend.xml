@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+			xsi:noNamespaceSchemaLocation="MM_orarend.xsd">
+    <ora id="1" tipus="gyakorlati">
+        <targy>Testneveles</targy> 
+        <idopont>
+            <nap>kedd</nap>
+            <tol>1100</tol>
+            <ig>1200</ig>
+        </idopont>
+        <helyszin>E4/edzoterem</helyszin>
+        <oktato>Fellinger Szilvia</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+    <ora id="2" tipus="elmeleti">
+        <targy>Adatkezeles XML-ben</targy> 
+        <idopont>
+            <nap>kedd</nap>
+            <tol>1200</tol>
+            <ig>1400</ig>
+        </idopont>
+        <helyszin>A2/I</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+    <ora id="2" tipus="gyakorlati">
+        <targy>Adatkezeles XML-ben</targy> 
+        <idopont>
+            <nap>szerda</nap>
+            <tol>1000</tol>
+            <ig>1200</ig>
+        </idopont>
+        <helyszin>Inf/202</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+    <ora id="3" tipus="elmeleti">
+        <targy>Vállalati információs rendszerek fejlesztése</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>1600</tol>
+            <ig>1800</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Sasvári Péter László</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+    <ora id="3" tipus="gyakorlati">
+        <targy>Vállalati információs rendszerek fejlesztése</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>1800</tol>
+            <ig>2000</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Sasvári Péter László</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+</orarend>
