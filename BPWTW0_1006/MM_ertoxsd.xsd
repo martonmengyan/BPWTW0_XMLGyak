@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="ertoxsd">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="A">
+				<xs:complexType mixed="true">
+					<xs:sequence>
+						<xs:element name="b1" type="xs:string"/>
+						<xs:element name="c1" type="xs:string"/>
+					</xs:sequence>
+					<xs:attribute name="a1" type="xs:int" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="b1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="x1" type="xs:string"/>
+						<xs:element name="y1" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="c1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="d1" type="xs:string"/>
+						<xs:element name="e1" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="B">
+				<xs:complexType mixed="true">
+					<xs:sequence>
+						<xs:element name="b2" type="xs:string"/>
+					</xs:sequence>
+					<xs:attribute name="a2" type="xs:int" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="b2">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="x2" type="xs:string"/>
+						<xs:element name="y2" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="C">
+				<xs:complexType mixed="true">
+					<xs:sequence>
+						<xs:element name="b3" type="xs:string"/>
+					</xs:sequence>
+					<xs:attribute name="a3" type="xs:int" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+
+
+</xs:schema>

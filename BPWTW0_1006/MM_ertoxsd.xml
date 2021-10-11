@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ertoxsd xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+			xsi:noNamespaceSchemaLocation="MM_ertoxsd.xsd">
+			
+	<A a1="1">
+		<b1>
+		<x1>x1</x1>
+		<y1>y1</y1>
+		</b1>
+		<b1>
+		<x1>x12</x1>
+		<y1>y12</y1>
+		</b1>
+		<c1>c1</c1>
+	</A>
+	<B a2="2">
+		<b2>
+		<x2>x2</x2>
+		<y2>y2</y2>
+		</b2>
+	</B>	
+	<C a3="3">
+		<b3>b3</b3>
+	</C>		
+			
+</ertoxsd>
