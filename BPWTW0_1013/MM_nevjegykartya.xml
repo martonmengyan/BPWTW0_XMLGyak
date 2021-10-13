@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nevjegykartyak		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:noNamespaceSchemaLocation="MM_nevjegykartya.xsd">
+	<nevjegykartya>
+		<nev>Kiss Lajos</nev>
+		<ceg>
+			<nev>Auto Kft.</nev>
+			<cim>
+				<iranyitoszam>3312</iranyitoszam>
+				<varos>Miskolc</varos>
+				<utca>Erdo utca</utca>
+				<hazszam>23</hazszam>
+			</cim>
+			<telefonszam>06705657889</telefonszam>
+			<weblap>kisslajosauto.hu</weblap>
+		</ceg>
+		<beosztas>Fonok</beosztas>
+		<telefonszam>06705657889</telefonszam>
+		<email>kisslajos@gmail.com</email>
+	</nevjegykartya>
+	
+	<nevjegykartya>
+		<nev>Nagy Mate</nev>
+		<ceg>
+			<nev>Auto Kft.</nev>
+			<cim>
+				<iranyitoszam>3312</iranyitoszam>
+				<varos>Miskolc</varos>
+				<utca>Erdo utca</utca>
+				<hazszam>23</hazszam>
+			</cim>
+			<telefonszam>06705657889</telefonszam>
+			<weblap>kisslajosauto.hu</weblap>
+		</ceg>
+		<beosztas>Beosztott</beosztas>
+		<telefonszam>06705657320</telefonszam>
+		<email>nagymate@gmail.com</email>
+	</nevjegykartya>
+</nevjegykartyak>

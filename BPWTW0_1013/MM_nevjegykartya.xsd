@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="nevjegykartyak">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nevjegykartya" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="nevjegykartya">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nev" type="xs:string"/>
+				<xs:element name="ceg" type="cegTipus"/>
+				<xs:element name="beosztas" type="beosztasTipus"/>
+				<xs:element name="telefonszam" type="xs:positiveInteger"/>
+				<xs:element name="email" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="cegTipus">
+		<xs:sequence>
+			<xs:element name="nev" type="xs:string" />
+			<xs:element name="cim" type="cimTipus" />
+			<xs:element name="telefonszam" type="xs:string" />
+			<xs:element name="web" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="cimTipus">
+		<xs:sequence>
+			<xs:element name="iranyitoszam" type="xs:string" />
+			<xs:element name="varos" type="xs:string" />
+			<xs:element name="utca" type="xs:string" />
+			<xs:element name="hazszam" type="xs:positiveInteger" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="beosztasTipus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Fonok"/>
+			<xs:enumeration value="Beosztott"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
+	
