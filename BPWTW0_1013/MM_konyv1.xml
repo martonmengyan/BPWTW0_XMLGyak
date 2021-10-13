@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konyvek	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="MM_konyv1.xsd">
+	<konyv>
+		<cim></cim>
+		<szerzo></szerzo>
+		<szereplo>
+			<nev></nev>
+			<baratja></baratja>
+			<szuletett></szuletett>
+			<jellemzes></jellemzes>
+		</szereplo>
+		
+	</konyv>
+</konyvek>
