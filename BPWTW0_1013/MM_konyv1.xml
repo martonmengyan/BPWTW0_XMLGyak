@@ -2,7 +2,7 @@
 
 <konyvek	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xsi:noNamespaceSchemaLocation="MM_konyv1.xsd">
-	<konyv>
+	<konyv isbn="">
 		<cim></cim>
 		<szerzo></szerzo>
 		<szereplo>
@@ -11,6 +11,14 @@
 			<szuletett></szuletett>
 			<jellemzes></jellemzes>
 		</szereplo>
-		
+	</konyv>
+	<konyv isbn="">
+		<cim></cim>
+		<szerzo></szerzo>
+		<szereplo>
+			<nev></nev>
+			<szuletett></szuletett>
+			<jellemzes></jellemzes>
+		</szereplo>
 	</konyv>
 </konyvek>

@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.w3.org/2001/XMLSchema">
-
-
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name="konyvek">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="konyv" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="konyv">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cim" type="xs:string"/>
+				<xs:element name="szerzo" type="xs:string"/>
+				<xs:element name="szereplo" type="szereploTipus"/>
+			</xs:sequence>
+			<xs:attribute name="isbn" type="xs:positiveInteger"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="szereploTipus">
+		<xs:sequence>
+			<xs:element name="nev" type="xs:string" />
+			<xs:element name="szuletett" type="xs:positiveInteger" />
+			<xs:element name="jellemzes" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="szereploTipus2">
+		<xs:complexContent>
+			<xs:extension base="szereploTipus">
+				<xs:sequence>
+					<xs:element name="baratja" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>	
 
 </xs:schema>
