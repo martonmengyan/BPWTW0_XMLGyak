@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE udvar SYSTEM "macskakBPWTW0.dtd">  -->
+<macskak	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="macskakBPWTW0.xsd">
+
+	<macska id="1">
+		<nev></nev>
+		<kor></kor>
+		<fajta></fajta>
+	</macska>
+	<macska id="2">
+		<nev></nev>
+		<kor></kor>
+		<fajta></fajta>
+	</macska>
+	<macska id="3">
+		<nev></nev>
+		<kor></kor>
+		<fajta></fajta>
+	</macska>
+
+</macskak>

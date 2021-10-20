@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT macskak (macska+)>
+<!ELEMENT macska (nev, kor, fajta)>
+<!ATTLIST macska id CDATA #REQUIRED>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT kor (#PCDATA)>
+<!ELEMENT fajta (#PCDATA)>
+
+
+
+
