@@ -46,8 +46,8 @@ public class XsdValidation {
 	          System.out.println("SAX Exception: "+e1.getMessage());
 	          return false;
 	       } catch (XMLStreamException e2) {
-		       System.out.println("SAX Exception: "+e2.getMessage());
-		       return false;
+		  System.out.println("XMLStreamException: "+e2.getMessage());
+		  return false;
 		}
 	   return true;
 	}
