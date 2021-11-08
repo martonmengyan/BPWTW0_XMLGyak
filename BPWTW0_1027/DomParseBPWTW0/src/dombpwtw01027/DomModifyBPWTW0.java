@@ -6,7 +6,6 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -33,11 +32,11 @@ public class DomModifyBPWTW0 {
 		doc.getDocumentElement().normalize();
 		
 		listNodes(doc);
-		//Luxurycars tˆrlÈse
+		//Luxurycars t√∂rl√©se
 		deleteNode(doc,"luxurycars");
-		//Ferrari mÛdosÌt·sa
+		//Ferrari m√≥dos√≠t√°sa
 		modifyNode(doc, "Ferrari", "Lamborghini");
-		//KiÌr·s
+		//Ki√≠r√°s
 		System.out.println("------------ Modified File ------------");
 		listNodes(doc);
 
@@ -47,10 +46,6 @@ public class DomModifyBPWTW0 {
 	  public static void listNodes(Document doc) throws TransformerFactoryConfigurationError, TransformerException {
 		  TransformerFactory transformerFactory = TransformerFactory.newInstance();
 		  Transformer transf = transformerFactory.newTransformer();
-		  
-		  transf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-		  transf.setOutputProperty(OutputKeys.INDENT, "yes");
-		  transf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 			
 		  DOMSource source = new DOMSource(doc);
 		  StreamResult console = new StreamResult(System.out);
