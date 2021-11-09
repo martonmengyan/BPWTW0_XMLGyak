@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<adatbazis 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="XSDBPWTW0.xsd">
+
+<!-- Publisherek -->
+
+	<Publisher>
+		<Név>GamesProdigy</Név>
+		<Ügyintéző>Hazárdy Enikő</Ügyintéző>
+		<Cím>
+			<Irányítószám>3522</Irányítószám>
+			<Város>Miskolc</Város>
+			<Utca>Kehely</Utca>
+			<Házszám>4</Házszám>
+		</Cím>
+		<forgalmazóKód>1</forgalmazóKód>
+	</Publisher>
+	
+	<Publisher>
+		<Név>DuckGames</Név>
+		<Ügyintéző>Nagy Dániel</Ügyintéző>
+		<Cím>
+			<Irányítószám>3542</Irányítószám>
+			<Város>Miskolc</Város>
+			<Utca>Benedek</Utca>
+			<Házszám>22</Házszám>
+		</Cím>
+		<forgalmazóKód>2</forgalmazóKód>
+	</Publisher>
+
+<!-- Forgalmazók -->
+
+	<Forgalmazó Kód="1">
+		<Alkalmazott>
+			<Név>Kiss Pista</Név>
+			<Email>pistakiss@gmail.com</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Név>Nagy Anett</Név>
+			<Email>anettnagy88@freemail.hu</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Név>Orosz Márton</Név>
+			<Email>martonorosz00@gmail.hu</Email>
+		</Alkalmazott>
+		<Cím>
+			<Irányítószám>3537</Irányítószám>
+			<Város>Miskolc</Város>
+			<Utca>Csésze</Utca>
+			<Házszám>14</Házszám>
+		</Cím>
+		<weboldalLink>www.sfeam.com</weboldalLink>
+	</Forgalmazó>
+	
+	<Forgalmazó Kód="2">
+		<Alkalmazott>
+			<Név>Fekete Nándor</Név>
+			<Email>nandorfekete@citromail.hu</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Név>Nagy Lajos</Név>
+			<Email>lajosnagy@gmail.hu</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Név>Molnár Péter</Név>
+			<Email>petermolnar@freemail.hu</Email>
+		</Alkalmazott>
+		<Cím>
+			<Irányítószám>3508</Irányítószám>
+			<Város>Miskolc</Város>
+			<Utca>Danta</Utca>
+			<Házszám>7</Házszám>
+		</Cím>
+		<weboldalLink>www.urisoft.com</weboldalLink>
+	</Forgalmazó>
+
+<!-- Vásárlók -->
+
+	<Vásárló Telefonszám="06605441284">
+		<Név>Lengyel Anna</Név>
+		<Fizetés_módja>PayPal</Fizetés_módja>
+		<Születési_év>2001</Születési_év>
+		<Cím>
+			<Irányítószám>3543</Irányítószám>
+			<Város>Miskolc</Város>
+			<Utca>Cipő</Utca>
+			<Házszám>27</Házszám>
+		</Cím>
+		<weboldalLink>www.sfeam.com</weboldalLink>
+	</Vásárló>
+	
+	<Vásárló Telefonszám="06605851274">
+		<Név>Kovács Vanessza</Név>
+		<Fizetés_módja></Fizetés_módja>
+		<Születési_év>1997</Születési_év>
+		<Cím>
+			<Irányítószám>3612</Irányítószám>
+			<Város>Miskolc</Város>
+			<Utca>Sisak</Utca>
+			<Házszám>15</Házszám>
+		</Cím>
+		<weboldalLink>www.sfeam.com</weboldalLink>
+	</Vásárló>
+	
+	<Vásárló Telefonszám="06605556224">
+		<Név>Varga Márk</Név>
+		<Fizetés_módja>Mastercard</Fizetés_módja>
+		<Születési_év>2007</Születési_év>
+		<Cím>
+			<Irányítószám>3508</Irányítószám>
+			<Város>Miskolc</Város>
+			<Utca>Péter</Utca>
+			<Házszám>9</Házszám>
+		</Cím>
+		<weboldalLink>www.urisoft.com</weboldalLink>
+	</Vásárló>
+
+<!-- Játékok -->
+
+	<Játék Kód="1">
+		<Ár>14999</Ár>
+		<Kategória>Sports Games</Kategória>
+		<Platform>PS4</Platform>
+	</Játék>
+	
+	<Játék Kód="2">
+		<Ár>7999</Ár>
+		<Kategória>Role-Playing Games</Kategória>
+		<Platform>XBOX</Platform>
+	</Játék>
+	
+	<Játék Kód="3">
+		<Ár>4999</Ár>
+		<Kategória></Kategória>
+		<Platform></Platform>
+	</Játék>
+
+<!-- Weboldalak -->
+
+	<Weboldal Link="www.urisoft.com">
+		<Karbantartó>
+			<Név>Kiss Ádám</Név>
+			<Email>urisoftmanagment@gmail.com</Email>
+		</Karbantartó>
+	</Weboldal>
+
+	<Weboldal Link="www.sfeam.com">
+		<Karbantartó>
+			<Név>Kovács Gábor</Név>
+			<Email>sfeammanagment@gmail.com</Email>
+		</Karbantartó>
+	</Weboldal>
+
+<!-- Indok -->
+
+	<Indok>
+		<Szabadidő>false</Szabadidő>
+		<Karantén>false</Karantén>
+		<Lazítás>true</Lazítás>
+		<vásárlóTelefonszám>06605441284</vásárlóTelefonszám>
+		<játékKód>1</játékKód>
+	</Indok>
+	
+	<Indok>
+		<Szabadidő>true</Szabadidő>
+		<Karantén>false</Karantén>
+		<Lazítás>false</Lazítás>
+		<vásárlóTelefonszám>06605851274</vásárlóTelefonszám>
+		<játékKód>2</játékKód>
+	</Indok>
+	
+	<Indok>
+		<Szabadidő>false</Szabadidő>
+		<Karantén>true</Karantén>
+		<Lazítás>false</Lazítás>
+		<vásárlóTelefonszám>06605556224</vásárlóTelefonszám>
+		<játékKód>3</játékKód>
+	</Indok>
+</adatbazis>

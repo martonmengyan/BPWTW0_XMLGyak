@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="adatbazis">
+	<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Publisher" type="publisherType" maxOccurs="unbounded"/>
+				<xs:element name="Forgalmazó" type="forgalmazóType" maxOccurs="unbounded"/>
+				<xs:element name="Vásárló" type="vásárlóType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Játék" type="játékType" maxOccurs="unbounded"/>
+				<xs:element name="Weboldal" type="weboldalType" maxOccurs="unbounded"/>
+				<xs:element name="Indok" type="indokType" maxOccurs="unbounded"/>
+			</xs:sequence>
+	</xs:complexType>
+	<xs:key name="vásárlóKulcs">
+		<xs:selector xpath="Vásárló"/>
+		<xs:field xpath="@Telefonszám"/>
+	</xs:key>
+	<xs:key name="játékKulcs">
+		<xs:selector xpath="Játék"/>
+		<xs:field xpath="@Kód"/>
+	</xs:key>
+	<xs:key name="forgalmazóKulcs">
+		<xs:selector xpath="Forgalmazó"/>
+		<xs:field xpath="@Kód"/>
+	</xs:key>
+	<xs:key name="weboldalKulcs">
+		<xs:selector xpath="Weboldal"/>
+		<xs:field xpath="@Link"/>
+	</xs:key>
+	<xs:keyref name="Forgalmazó-Weboldal" refer="weboldalKulcs">
+			<xs:selector xpath="Forgalmazó/weboldalLink"/>
+            <xs:field xpath="."/>
+	</xs:keyref>
+	<xs:keyref name="Vásárló-Weboldal" refer="weboldalKulcs">
+			<xs:selector xpath="Vásárló/weboldalLink"/>
+            <xs:field xpath="."/>
+	</xs:keyref>	
+	<xs:keyref name="Vásárló-Indok" refer="vásárlóKulcs">
+			<xs:selector xpath="Indok/vásárlóTelefonszám"/>
+            <xs:field xpath="."/>
+	</xs:keyref>
+	<xs:keyref name="Játék-Indok" refer="játékKulcs">
+			<xs:selector xpath="Indok/játékKód"/>
+            <xs:field xpath="."/>
+	</xs:keyref>
+	<xs:keyref name="Publisher-Forgalmazó" refer="forgalmazóKulcs">
+			<xs:selector xpath="Publisher/forgalmazóKód"/>
+            <xs:field xpath="."/>
+	</xs:keyref>
+</xs:element>
+
+<xs:complexType name="publisherType">
+	<xs:sequence>
+				<xs:element name="Név" type="xs:string"/>
+				<xs:element name="Ügyintéző" type="xs:string"/>
+				<xs:element name="Cím" type="címType"/>
+				<xs:element name="forgalmazóKód" type="xs:int"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="forgalmazóType">
+	<xs:sequence>
+				<xs:element name="Alkalmazott" type="alkalmazottType" maxOccurs="unbounded"/>
+				<xs:element name="Cím" type="címType"/>
+				<xs:element name="weboldalLink" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="Kód" type="xs:positiveInteger"/>
+</xs:complexType>
+<xs:complexType name="vásárlóType">
+	<xs:sequence>
+				<xs:element name="Név" type="xs:string"/>
+				<xs:element name="Fizetés_módja" type="fizetésType" default="Mastercard"/>
+				<xs:element name="Születési_év" type="xs:int"/>
+				<xs:element name="Cím" type="címType"/>
+				<xs:element name="weboldalLink" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="Telefonszám" type="xs:positiveInteger"/>
+</xs:complexType>
+<xs:complexType name="játékType">
+	<xs:sequence>
+				<xs:element name="Ár" type="xs:int"/>
+				<xs:element name="Kategória" type="kategóriaType" default="Action Games"/>
+				<xs:element name="Platform" type="platformType" default="PC"/>
+	</xs:sequence>
+	<xs:attribute name="Kód" type="xs:positiveInteger"/>
+</xs:complexType>
+<xs:complexType name="weboldalType">
+	<xs:sequence>
+				<xs:element name="Karbantartó" type="karbantartóType"/>
+	</xs:sequence>
+	<xs:attribute name="Link" type="xs:string"/>
+</xs:complexType>
+<xs:complexType name="alkalmazottType">
+	<xs:sequence>
+				<xs:element name="Név" type="xs:string"/>
+				<xs:element name="Email" type="emailType"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="karbantartóType">
+	<xs:sequence>
+				<xs:element name="Név" type="xs:string"/>
+				<xs:element name="Email" type="emailType"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="címType">
+	<xs:sequence>
+				<xs:element name="Irányítószám" type="xs:int"/>
+				<xs:element name="Város" type="xs:string"/>
+				<xs:element name="Utca" type="xs:string"/>
+				<xs:element name="Házszám" type="xs:int"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="kategóriaType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Action Games"/>
+			<xs:enumeration value="Action-Adventure Games"/>
+			<xs:enumeration value="Adventure Games"/>
+			<xs:enumeration value="Role-Playing Games"/>
+			<xs:enumeration value="Simulation Games"/>
+			<xs:enumeration value="Strategy Games"/>
+			<xs:enumeration value="Sports Games"/>
+		</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="fizetésType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PayPal"/>
+			<xs:enumeration value="Mastercard"/>
+		</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="platformType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PC"/>
+			<xs:enumeration value="PS4"/>
+			<xs:enumeration value="PS3"/>
+			<xs:enumeration value="XBOX"/>
+		</xs:restriction>
+</xs:simpleType>
+<xs:complexType name="indokType">
+	<xs:sequence>
+				<xs:element name="Szabadidő" type="xs:boolean"/>
+				<xs:element name="Karantén" type="xs:boolean"/>
+				<xs:element name="Lazítás" type="xs:boolean"/>
+				<xs:element name="vásárlóTelefonszám" type="xs:positiveInteger"/>
+				<xs:element name="játékKód" type="xs:int"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="emailType"> 
+	<xs:restriction base="xs:string"> 
+		<xs:pattern value="[^@]+@[^\.]+\..+|"/> 
+	</xs:restriction> 
+</xs:simpleType> 
+</xs:schema>
