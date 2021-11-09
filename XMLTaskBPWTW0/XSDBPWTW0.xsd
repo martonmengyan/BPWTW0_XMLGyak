@@ -30,23 +30,23 @@
 	</xs:key>
 	<xs:keyref name="Forgalmazó-Weboldal" refer="weboldalKulcs">
 		<xs:selector xpath="Forgalmazó/weboldalLink"/>
-        <xs:field xpath="."/>
+		<xs:field xpath="."/>
 	</xs:keyref>
 	<xs:keyref name="Vásárló-Weboldal" refer="weboldalKulcs">
 		<xs:selector xpath="Vásárló/weboldalLink"/>
-        <xs:field xpath="."/>
+		<xs:field xpath="."/>
 	</xs:keyref>	
 	<xs:keyref name="Vásárló-Indok" refer="vásárlóKulcs">
 		<xs:selector xpath="Indok/vásárlóTelefonszám"/>
-        <xs:field xpath="."/>
+		<xs:field xpath="."/>
 	</xs:keyref>
 	<xs:keyref name="Játék-Indok" refer="játékKulcs">
 		<xs:selector xpath="Indok/játékKód"/>
-        <xs:field xpath="."/>
+		<xs:field xpath="."/>
 	</xs:keyref>
 	<xs:keyref name="Publisher-Forgalmazó" refer="forgalmazóKulcs">
 		<xs:selector xpath="Publisher/forgalmazóKód"/>
-        <xs:field xpath="."/>
+		<xs:field xpath="."/>
 	</xs:keyref>
 </xs:element>
 
