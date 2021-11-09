@@ -3,14 +3,14 @@
 
 <xs:element name="adatbazis">
 	<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Publisher" type="publisherType" maxOccurs="unbounded"/>
-				<xs:element name="Forgalmazó" type="forgalmazóType" maxOccurs="unbounded"/>
-				<xs:element name="Vásárló" type="vásárlóType" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element name="Játék" type="játékType" maxOccurs="unbounded"/>
-				<xs:element name="Weboldal" type="weboldalType" maxOccurs="unbounded"/>
-				<xs:element name="Indok" type="indokType" maxOccurs="unbounded"/>
-			</xs:sequence>
+		<xs:sequence>
+			<xs:element name="Publisher" type="publisherType" maxOccurs="unbounded"/>
+			<xs:element name="Forgalmazó" type="forgalmazóType" maxOccurs="unbounded"/>
+			<xs:element name="Vásárló" type="vásárlóType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Játék" type="játékType" maxOccurs="unbounded"/>
+			<xs:element name="Weboldal" type="weboldalType" maxOccurs="unbounded"/>
+			<xs:element name="Indok" type="indokType" maxOccurs="unbounded"/>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:key name="vásárlóKulcs">
 		<xs:selector xpath="Vásárló"/>
@@ -29,24 +29,24 @@
 		<xs:field xpath="@Link"/>
 	</xs:key>
 	<xs:keyref name="Forgalmazó-Weboldal" refer="weboldalKulcs">
-			<xs:selector xpath="Forgalmazó/weboldalLink"/>
-            <xs:field xpath="."/>
+		<xs:selector xpath="Forgalmazó/weboldalLink"/>
+        <xs:field xpath="."/>
 	</xs:keyref>
 	<xs:keyref name="Vásárló-Weboldal" refer="weboldalKulcs">
-			<xs:selector xpath="Vásárló/weboldalLink"/>
-            <xs:field xpath="."/>
+		<xs:selector xpath="Vásárló/weboldalLink"/>
+        <xs:field xpath="."/>
 	</xs:keyref>	
 	<xs:keyref name="Vásárló-Indok" refer="vásárlóKulcs">
-			<xs:selector xpath="Indok/vásárlóTelefonszám"/>
-            <xs:field xpath="."/>
+		<xs:selector xpath="Indok/vásárlóTelefonszám"/>
+        <xs:field xpath="."/>
 	</xs:keyref>
 	<xs:keyref name="Játék-Indok" refer="játékKulcs">
-			<xs:selector xpath="Indok/játékKód"/>
-            <xs:field xpath="."/>
+		<xs:selector xpath="Indok/játékKód"/>
+        <xs:field xpath="."/>
 	</xs:keyref>
 	<xs:keyref name="Publisher-Forgalmazó" refer="forgalmazóKulcs">
-			<xs:selector xpath="Publisher/forgalmazóKód"/>
-            <xs:field xpath="."/>
+		<xs:selector xpath="Publisher/forgalmazóKód"/>
+        <xs:field xpath="."/>
 	</xs:keyref>
 </xs:element>
 
