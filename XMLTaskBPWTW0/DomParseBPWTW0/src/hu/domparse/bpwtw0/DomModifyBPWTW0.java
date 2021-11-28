@@ -33,13 +33,13 @@ public class DomModifyBPWTW0 {
 			Node rNode = doc.getChildNodes().item(0);
 		  	NodeList nList = rNode.getChildNodes();
 		  	
-		  	//A 06605851274 Telefonszám attribútúmmal rendelkezõ nevét átírja Kovács Vanessza Anett-re.
+		  	//A 06605851274 TelefonszÃ¡m attribÃºtÃºmmal rendelkezÃµ nevÃ©t Ã¡tÃ­rja KovÃ¡cs Vanessza Anett-re.
 			modifyNodeByAttr(nList,"Telefonszam","06605851274","Nev","Kovacs Vanessza Anett");
-			//A vásárlók fizetési_módját átírja Paypal-ra mindenesetben.
+			//A vÃ¡sÃ¡rlÃ³k fizetÃ©si_mÃ³djÃ¡t Ã¡tÃ­rja Paypal-ra mindenesetben.
 			modifyNodeByName(nList,"Vasarlo","Fizetes_modja","PayPal");
-			//A www.sfeam.com Link attribútúmmal rendelkezõ emailt-jét átírja newsfeammanagment@gmail.com-re.
+			//A jÃ¡tÃ©kok Platform-jÃ¡t mÃ³dosÃ­tja PC-re mindenesetben.
 			modifyNodeByName(nList,"Jatek","Platform","PC");
-			//kiíró függvény meghívása
+			//kiÃ­rÃ³ fÃ¼ggvÃ©ny meghÃ­vÃ¡sa
 			listNodes(doc);
 
 		} catch (TransformerException | TransformerFactoryConfigurationError |
@@ -48,8 +48,8 @@ public class DomModifyBPWTW0 {
 		}
 	}
 	
-	/*attrTypeName az attribútom nevét, attrName az attribútom tartalmát,
-	 * a name a gyerek elem nevét, a nameTo a gyerek elem új tartalmát tartalmazza.*/
+	/*attrTypeName az attribÃºtom nevÃ©t, attrName az attribÃºtom tartalmÃ¡t,
+	 * a name a gyerek elem nevÃ©t, a nameTo a gyerek elem Ãºj tartalmÃ¡t tartalmazza.*/
 	private static void modifyNodeByAttr(NodeList nList,String attrTypeName,
 			String attrName, String name, String nameTo) {
 		for (int temp = 0; temp < nList.getLength(); temp++) {  
@@ -58,12 +58,12 @@ public class DomModifyBPWTW0 {
 				Element elem = (Element) nNode;
 				//megkeresi azt az elemet, amelynek az 'attrTypeName' tartalma 'attrName'
 				if(elem.getAttribute(attrTypeName).equals(attrName)) {
-					//kikeresett elemnek a gyerekelemeit megszámoljuk és lementjük 'cList'-be
+					//kikeresett elemnek a gyerekelemeit megszÃ¡moljuk Ã©s lementjÃ¼k 'cList'-be
 					NodeList cList = elem.getChildNodes();
-					//végig járjuk az adott gyerekelemet
+					//vÃ©gig jÃ¡rjuk az adott gyerekelemet
 					for(int j=0; j < cList.getLength(); j++) {	
 						Node cNode = cList.item(j);
-						//megváltoztatja a kikeresett gyerek elem 'name' tulajdonságát 'nameTo'-ra 
+						//megvÃ¡ltoztatja a kikeresett gyerek elem 'name' tulajdonsÃ¡gÃ¡t 'nameTo'-ra 
 						if(cNode.getNodeType() == Node.ELEMENT_NODE) {
 							if(cNode.getNodeName().equals(name)) {
 							cNode.setTextContent(nameTo);
@@ -75,7 +75,7 @@ public class DomModifyBPWTW0 {
 		}
 	}
 	
-	//a nodeName az elem nevét,name a gyerek elem nevét, a nameTo a gyerek elem új tartalmát tartalmazza.
+	//a nodeName az elem nevÃ©t,name a gyerek elem nevÃ©t, a nameTo a gyerek elem Ãºj tartalmÃ¡t tartalmazza.
 	private static void modifyNodeByName(NodeList nList,String nodeName, String name, String nameTo) {
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			Node nNode = nList.item(temp);
@@ -83,12 +83,12 @@ public class DomModifyBPWTW0 {
 				Element elem = (Element) nNode;
 				//megkeresi azokat az elemeket, amelyeknek a neve 'nodeName'
 				if(elem.getNodeName().equals(nodeName)) {
-					//kikeresett elemeket megszámoljuk és lementjük 'cList'-be
+					//kikeresett elemeket megszÃ¡moljuk Ã©s lementjÃ¼k 'cList'-be
 					NodeList cList = elem.getChildNodes();
-					//végig járjuk az adott elemek gyerek elemeit
+					//vÃ©gig jÃ¡rjuk az adott elemek gyerek elemeit
 					for(int j=0; j < cList.getLength(); j++) {
 						Node cNode = cList.item(j);
-						//megváltoztatja a kikeresett gyerek elem 'name' tulajdonságát 'nameTo'-ra 
+						//megvÃ¡ltoztatja a kikeresett gyerek elem 'name' tulajdonsÃ¡gÃ¡t 'nameTo'-ra 
 						if(cNode.getNodeType() == Node.ELEMENT_NODE) {
 							if(cNode.getNodeName().equals(name)) {
 								cNode.setTextContent(nameTo);
@@ -100,7 +100,7 @@ public class DomModifyBPWTW0 {
 		}
 	}
 	
-	//kiíró függvény
+	//kiÃ­rÃ³ fÃ¼ggvÃ©ny
 	public static void listNodes(Document doc) throws TransformerFactoryConfigurationError, TransformerException {
 		TransformerFactory transformerFactory = TransformerFactory.newInstance();
 		Transformer transf = transformerFactory.newTransformer();
