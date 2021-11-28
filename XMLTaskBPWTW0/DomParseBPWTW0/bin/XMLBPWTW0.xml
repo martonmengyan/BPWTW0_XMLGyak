@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<adatbazis 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="XSDBPWTW0.xsd">
+
+<!-- Publisherek -->
+
+	<Publisher>
+		<Nev>GamesProdigy</Nev>
+		<Ugyintezo>Hazardy Eniko</Ugyintezo>
+		<Cim>
+			<Iranyitoszam>3522</Iranyitoszam>
+			<Varos>Miskolc</Varos>
+			<Utca>Kehely</Utca>
+			<Hazszam>4</Hazszam>
+		</Cim>
+		<forgalmazoKod>1</forgalmazoKod>
+	</Publisher>
+	
+	<Publisher>
+		<Nev>DuckGames</Nev>
+		<Ugyintezo>Nagy Daniel</Ugyintezo>
+		<Cim>
+			<Iranyitoszam>3542</Iranyitoszam>
+			<Varos>Miskolc</Varos>
+			<Utca>Benedek</Utca>
+			<Hazszam>22</Hazszam>
+		</Cim>
+		<forgalmazoKod>2</forgalmazoKod>
+	</Publisher>
+
+<!-- Forgalmazok -->
+
+	<Forgalmazo Kod="1">
+		<Alkalmazott>
+			<Nev>Kiss Pista</Nev>
+			<Email>pistakiss@gmail.com</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Nev>Nagy Anett</Nev>
+			<Email>anettnagy88@freemail.hu</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Nev>Orosz Marton</Nev>
+			<Email>martonorosz00@gmail.hu</Email>
+		</Alkalmazott>
+		<Cim>
+			<Iranyitoszam>3537</Iranyitoszam>
+			<Varos>Miskolc</Varos>
+			<Utca>Csesze</Utca>
+			<Hazszam>14</Hazszam>
+		</Cim>
+		<weboldalLink>www.sfeam.com</weboldalLink>
+	</Forgalmazo>
+	
+	<Forgalmazo Kod="2">
+		<Alkalmazott>
+			<Nev>Fekete Nandor</Nev>
+			<Email>nandorfekete@citromail.hu</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Nev>Nagy Lajos</Nev>
+			<Email>lajosnagy@gmail.hu</Email>
+		</Alkalmazott>
+		<Alkalmazott>
+			<Nev>Molnar Peter</Nev>
+			<Email>petermolnar@freemail.hu</Email>
+		</Alkalmazott>
+		<Cim>
+			<Iranyitoszam>3508</Iranyitoszam>
+			<Varos>Miskolc</Varos>
+			<Utca>Danta</Utca>
+			<Hazszam>7</Hazszam>
+		</Cim>
+		<weboldalLink>www.urisoft.com</weboldalLink>
+	</Forgalmazo>
+
+<!-- vasarlok -->
+
+	<Vasarlo Telefonszam="06605441284">
+		<Nev>Lengyel Anna</Nev>
+		<Fizetes_modja>PayPal</Fizetes_modja>
+		<Szuletesi_ev>2001</Szuletesi_ev>
+		<Cim>
+			<Iranyitoszam>3543</Iranyitoszam>
+			<Varos>Miskolc</Varos>
+			<Utca>Cipi</Utca>
+			<Hazszam>27</Hazszam>
+		</Cim>
+		<weboldalLink>www.sfeam.com</weboldalLink>
+	</Vasarlo>
+	
+	<Vasarlo Telefonszam="06605851274">
+		<Nev>Kovacs Vanessza</Nev>
+		<Fizetes_modja></Fizetes_modja>
+		<Szuletesi_ev>1997</Szuletesi_ev>
+		<Cim>
+			<Iranyitoszam>3612</Iranyitoszam>
+			<Varos>Miskolc</Varos>
+			<Utca>Sisak</Utca>
+			<Hazszam>15</Hazszam>
+		</Cim>
+		<weboldalLink>www.sfeam.com</weboldalLink>
+	</Vasarlo>
+	
+	<Vasarlo Telefonszam="06605556224">
+		<Nev>Varga Mark</Nev>
+		<Fizetes_modja>Mastercard</Fizetes_modja>
+		<Szuletesi_ev>2007</Szuletesi_ev>
+		<Cim>
+			<Iranyitoszam>3508</Iranyitoszam>
+			<Varos>Miskolc</Varos>
+			<Utca>Peter</Utca>
+			<Hazszam>9</Hazszam>
+		</Cim>
+		<weboldalLink>www.urisoft.com</weboldalLink>
+	</Vasarlo>
+
+<!-- Jatekok -->
+
+	<Jatek Kod="1">
+		<Ar>14999</Ar>
+		<Kategoria>Sports Games</Kategoria>
+		<Platform>PS4</Platform>
+	</Jatek>
+	
+	<Jatek Kod="2">
+		<Ar>7999</Ar>
+		<Kategoria>Role-Playing Games</Kategoria>
+		<Platform>XBOX</Platform>
+	</Jatek>
+	
+	<Jatek Kod="3">
+		<Ar>4999</Ar>
+		<Kategoria></Kategoria>
+		<Platform></Platform>
+	</Jatek>
+
+<!-- Weboldalak -->
+
+	<Weboldal Link="www.urisoft.com">
+		<Karbantarto>
+			<Nev>Kiss Adam</Nev>
+			<Email>urisoftmanagment@gmail.com</Email>
+		</Karbantarto>
+	</Weboldal>
+
+	<Weboldal Link="www.sfeam.com">
+		<Karbantarto>
+			<Nev>Kovacs Gabor</Nev>
+			<Email>sfeammanagment@gmail.com</Email>
+		</Karbantarto>
+	</Weboldal>
+
+<!-- Indok -->
+
+	<Indok>
+		<Szabadido>false</Szabadido>
+		<Karanten>false</Karanten>
+		<Lazitas>true</Lazitas>
+		<vasarloTelefonszam>06605441284</vasarloTelefonszam>
+		<jatekKod>1</jatekKod>
+	</Indok>
+	
+	<Indok>
+		<Szabadido>true</Szabadido>
+		<Karanten>false</Karanten>
+		<Lazitas>false</Lazitas>
+		<vasarloTelefonszam>06605851274</vasarloTelefonszam>
+		<jatekKod>2</jatekKod>
+	</Indok>
+	
+	<Indok>
+		<Szabadido>false</Szabadido>
+		<Karanten>true</Karanten>
+		<Lazitas>false</Lazitas>
+		<vasarloTelefonszam>06605556224</vasarloTelefonszam>
+		<jatekKod>3</jatekKod>
+	</Indok>
+</adatbazis>

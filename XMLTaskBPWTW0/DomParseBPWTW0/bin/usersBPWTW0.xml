@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="usersBPWTW0.xsd">
+	<user id="">
+		<First_name>dasdas</First_name>
+		<Last_name>ddd</Last_name>
+		<Profession></Profession>
+	</user>
+	<user id="">
+		<First_name></First_name>
+		<Last_name></Last_name>
+		<Profession></Profession>
+	</user>
+	<user id="">
+		<First_name></First_name>
+		<Last_name></Last_name>
+		<Profession></Profession>
+	</user>
+</users>
