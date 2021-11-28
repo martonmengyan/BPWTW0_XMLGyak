@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="adatbazis">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="Publisher" type="publisherType" maxOccurs="unbounded"/>
+			<xs:element name="Forgalmazo" type="forgalmazoType" maxOccurs="unbounded"/>
+			<xs:element name="Vasarlo" type="vasarloType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Jatek" type="jatekType" maxOccurs="unbounded"/>
+			<xs:element name="Weboldal" type="weboldalType" maxOccurs="unbounded"/>
+			<xs:element name="Indok" type="indokType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:key name="VasarloKulcs">
+		<xs:selector xpath="Vasarlo"/>
+		<xs:field xpath="@Telefonszam"/>
+	</xs:key>
+	<xs:key name="JatekKulcs">
+		<xs:selector xpath="Jatek"/>
+		<xs:field xpath="@Kod"/>
+	</xs:key>
+	<xs:key name="ForgalmazoKulcs">
+		<xs:selector xpath="Forgalmazo"/>
+		<xs:field xpath="@Kod"/>
+	</xs:key>
+	<xs:key name="weboldalKulcs">
+		<xs:selector xpath="Weboldal"/>
+		<xs:field xpath="@Link"/>
+	</xs:key>
+	<xs:keyref name="Forgalmazo-Weboldal" refer="weboldalKulcs">
+		<xs:selector xpath="Forgalmazo/weboldalLink"/>
+		<xs:field xpath="."/>
+	</xs:keyref>
+	<xs:keyref name="Vasarlo-Weboldal" refer="weboldalKulcs">
+		<xs:selector xpath="Vasarlo/weboldalLink"/>
+		<xs:field xpath="."/>
+	</xs:keyref>	
+	<xs:keyref name="Vasarlo-Indok" refer="VasarloKulcs">
+		<xs:selector xpath="Indok/vasarloTelefonszam"/>
+		<xs:field xpath="."/>
+	</xs:keyref>
+	<xs:keyref name="Jatek-Indok" refer="JatekKulcs">
+		<xs:selector xpath="Indok/jatekKod"/>
+		<xs:field xpath="."/>
+	</xs:keyref>
+	<xs:keyref name="Publisher-Forgalmazo" refer="ForgalmazoKulcs">
+		<xs:selector xpath="Publisher/forgalmazoKod"/>
+		<xs:field xpath="."/>
+	</xs:keyref>
+</xs:element>
+
+<xs:complexType name="publisherType">
+	<xs:sequence>
+		<xs:element name="Nev" type="xs:string"/>
+		<xs:element name="Ugyintezo" type="xs:string"/>
+		<xs:element name="Cim" type="cimType"/>
+		<xs:element name="forgalmazoKod" type="xs:int"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="forgalmazoType">
+	<xs:sequence>
+		<xs:element name="Alkalmazott" type="alkalmazottType" maxOccurs="unbounded"/>
+		<xs:element name="Cim" type="cimType"/>
+		<xs:element name="weboldalLink" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="Kod" type="xs:positiveInteger"/>
+</xs:complexType>
+<xs:complexType name="vasarloType">
+	<xs:sequence>
+		<xs:element name="Nev" type="xs:string"/>
+		<xs:element name="Fizetes_modja" type="fizetesType" default="Mastercard"/>
+		<xs:element name="Szuletesi_ev" type="xs:int"/>
+		<xs:element name="Cim" type="cimType"/>
+		<xs:element name="weboldalLink" type="xs:string"/>
+	</xs:sequence>
+	<xs:attribute name="Telefonszam" type="xs:positiveInteger"/>
+</xs:complexType>
+<xs:complexType name="jatekType">
+	<xs:sequence>
+		<xs:element name="Ar" type="xs:int"/>
+		<xs:element name="Kategoria" type="kategoriaType" default="Action Games"/>
+		<xs:element name="Platform" type="platformType" default="PC"/>
+	</xs:sequence>
+	<xs:attribute name="Kod" type="xs:positiveInteger"/>
+</xs:complexType>
+<xs:complexType name="weboldalType">
+	<xs:sequence>
+		<xs:element name="Karbantarto" type="karbantartoType"/>
+	</xs:sequence>
+	<xs:attribute name="Link" type="xs:string"/>
+</xs:complexType>
+<xs:complexType name="alkalmazottType">
+	<xs:sequence>
+		<xs:element name="Nev" type="xs:string"/>
+		<xs:element name="Email" type="emailType"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="karbantartoType">
+	<xs:sequence>
+		<xs:element name="Nev" type="xs:string"/>
+		<xs:element name="Email" type="emailType"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:complexType name="cimType">
+	<xs:sequence>
+		<xs:element name="Iranyitoszam" type="xs:int"/>
+		<xs:element name="Varos" type="xs:string"/>
+		<xs:element name="Utca" type="xs:string"/>
+		<xs:element name="Hazszam" type="xs:int"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="kategoriaType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Action Games"/>
+		<xs:enumeration value="Action-Adventure Games"/>
+		<xs:enumeration value="Adventure Games"/>
+		<xs:enumeration value="Role-Playing Games"/>
+		<xs:enumeration value="Simulation Games"/>
+		<xs:enumeration value="Strategy Games"/>
+		<xs:enumeration value="Sports Games"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="fizetesType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="PayPal"/>
+		<xs:enumeration value="Mastercard"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="platformType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="PC"/>
+		<xs:enumeration value="PS4"/>
+		<xs:enumeration value="PS3"/>
+		<xs:enumeration value="XBOX"/>
+	</xs:restriction>
+</xs:simpleType>
+<xs:complexType name="indokType">
+	<xs:sequence>
+		<xs:element name="Szabadido" type="xs:boolean"/>
+		<xs:element name="Karanten" type="xs:boolean"/>
+		<xs:element name="Lazitas" type="xs:boolean"/>
+		<xs:element name="vasarloTelefonszam" type="xs:positiveInteger"/>
+		<xs:element name="jatekKod" type="xs:int"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="emailType"> 
+	<xs:restriction base="xs:string"> 
+		<xs:pattern value="[^@]+@[^\.]+\..+|"/> 
+	</xs:restriction> 
+</xs:simpleType> 
+</xs:schema>
