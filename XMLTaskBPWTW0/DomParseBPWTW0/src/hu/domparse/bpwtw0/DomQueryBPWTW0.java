@@ -28,45 +28,43 @@ public class DomQueryBPWTW0 {
 			Document doc = dBuilder.parse(xmlFile);
 			doc.getDocumentElement().normalize();
 			
-			//Xpath és expression-ök/lekérdezések.
-			XPath xPath = XPathFactory.newInstance().newXPath();
-			//String expression = "adatbazis/Jatek[Ar<9999]";
-			
-			//String expression = "adatbazis/Vasarlo[@Telefonszam=06605851274]/Nev";
-			
-			String expression = "adatbazis/Publisher/Cim[Iranyitoszam>3523]/Iranyitoszam";
-			
-		  	NodeList nList = (NodeList) xPath.compile(expression).evaluate(doc, XPathConstants.NODESET);
-		  	listChildNodes(nList);
+			NodeList nList0 = doc.getElementsByTagName("Vasarlo");
+		  	listChildNodes(nList0);
 		  	
-		} catch (XPathExpressionException | ParserConfigurationException | SAXException | IOException e ) {
+			NodeList nList1 = doc.getElementsByTagName("Jatek");
+		  	listChildNodes(nList1);
+		  	
+			NodeList nList2 = doc.getElementsByTagName("Publisher");
+		  	listChildNodes(nList2);
+		  	
+		} catch (ParserConfigurationException | SAXException | IOException e ) {
 			e.printStackTrace();
 		}
 	}
-	//meghívjuk a gyökérelemre a gyerekelem kiírató függvényt.
+	//meghÃ­vjuk a gyÃ¶kÃ©relemre a gyerekelem kiÃ­ratÃ³ fÃ¼ggvÃ©nyt.
 	private static void listChildNodes(NodeList nList) {
-		/*boolean változó a szép kiírásért, hogyha az adott elem az adatbazis közvetlen gyerek eleme,
-		 *akkor kiírás elõtt kihagy egy sort.*/
+		/*boolean vÃ¡ltozÃ³ a szÃ©p kiÃ­rÃ¡sÃ©rt, hogyha az adott elem az adatbazis kÃ¶zvetlen gyerek eleme,
+		 *akkor kiÃ­rÃ¡s elÃµtt kihagy egy sort.*/
 		boolean main = true;
-		/*adatbazis közvetlen gyerek elemeinek neve, ezekkel hasonlítjuk össze a getNodeName()-et,
-		 *hogy eldöntsük hogy az adatbazis közvetlen gyerek eleme-e.*/
+		/*adatbazis kÃ¶zvetlen gyerek elemeinek neve, ezekkel hasonlÃ­tjuk Ã¶ssze a getNodeName()-et,
+		 *hogy eldÃ¶ntsÃ¼k hogy az adatbazis kÃ¶zvetlen gyerek eleme-e.*/
 		String nNamesMain[] = { "Publisher", "Forgalmazo", "Vasarlo", "Jatek", "Weboldal", "Indok" };
 		for (int temp = 0; temp < nList.getLength(); temp++) { 
 			Node node = nList.item(temp);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
-				//Bejárjuk a string tömböt és összehasonlítjuk a NodeName-ekkel.
+				//BejÃ¡rjuk a string tÃ¶mbÃ¶t Ã©s Ã¶sszehasonlÃ­tjuk a NodeName-ekkel.
 				for(String nName : nNamesMain) {
 					if(node.getNodeName().equals(nName)) {
 						main=false;
 					}
 				}
-				//Ha az adatbazis közvetlen gyerek eleme, egy sort kihagyunk.
+				//Ha az adatbazis kÃ¶zvetlen gyerek eleme, egy sort kihagyunk.
 				if(!main) {
 					System.out.printf("%n");
 				}
-				//NodeName kiíratása.
+				//NodeName kiÃ­ratÃ¡sa.
 				System.out.printf("%s",node.getNodeName());
-				//Van-e attribútúma? Ha van kiíratjuk. (.getNodeName(),getNodeValue() )
+				//Van-e attribÃºtÃºma? Ha van kiÃ­ratjuk. (.getNodeName(),getNodeValue() )
 				if (node.hasAttributes()) {
 					NamedNodeMap nodeMap = node.getAttributes();
 					for (int i = 0; i < nodeMap.getLength(); i++) {
@@ -74,11 +72,11 @@ public class DomQueryBPWTW0 {
 						System.out.printf(", %s : %s",tempNode.getNodeName(), tempNode.getNodeValue());
 					}
 				} else System.out.printf(": ");
-				//Ha van az elemnek gyerekeleme, akkor azt nem íratjuk ki rögtön
+				//Ha van az elemnek gyerekeleme, akkor azt nem Ã­ratjuk ki rÃ¶gtÃ¶n
 				if (node.getChildNodes().getLength()==1) {
 					System.out.printf("%s%n",node.getTextContent());
 				} else System.out.printf("%n");
-				//gyerekelemre meghívjuk a gyerek elemeket kiírató függvényt.				
+				//gyerekelemre meghÃ­vjuk a gyerek elemeket kiÃ­ratÃ³ fÃ¼ggvÃ©nyt.				
 				if (node.hasChildNodes()) {
 					listChildNodes(node.getChildNodes());
 				}
