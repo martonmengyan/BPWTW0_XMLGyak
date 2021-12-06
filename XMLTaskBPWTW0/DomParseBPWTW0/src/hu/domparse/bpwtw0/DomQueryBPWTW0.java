@@ -6,10 +6,6 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -44,7 +40,7 @@ public class DomQueryBPWTW0 {
 	//meghívjuk a gyökérelemre a gyerekelem kiírató függvényt.
 	private static void listChildNodes(NodeList nList) {
 		/*boolean változó a szép kiírásért, hogyha az adott elem az adatbazis közvetlen gyerek eleme,
-		 *akkor kiírás elõtt kihagy egy sort.*/
+		 *akkor kiírás előtt kihagy egy sort.*/
 		boolean main = true;
 		/*adatbazis közvetlen gyerek elemeinek neve, ezekkel hasonlítjuk össze a getNodeName()-et,
 		 *hogy eldöntsük hogy az adatbazis közvetlen gyerek eleme-e.*/
