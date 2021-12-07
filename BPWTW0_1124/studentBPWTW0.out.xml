@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <h2>Hallgatok adatai</h2>
+        	
+        <p>
+            		Vezeteknev: <span style="color:#ff0000">Mengyán</span>
+            <br>
+            		Keresztnev: <span style="color:#00ff00">Márton</span>
+            <br>
+            <span>Mengyi</span>
+		Kor: <span style="color:blue">21</span>
+            <br>
+            		Fizetes: <span style="color:yellow">600000</span>
+            <br>
+        </p>
+        	
+        <p>
+            		Vezeteknev: <span style="color:#ff0000">Kek</span>
+            <br>
+            		Keresztnev: <span style="color:#00ff00">Dora</span>
+            <br>
+            <span>Dorka</span>
+		Kor: <span style="color:blue">20</span>
+            <br>
+            		Fizetes: <span style="color:yellow">550000</span>
+            <br>
+        </p>
+        	
+        <p>
+            		Vezeteknev: <span style="color:#ff0000">Zsoldos</span>
+            <br>
+            		Keresztnev: <span style="color:#00ff00">Andrea</span>
+            <br>
+            <span>Andi</span>
+		Kor: <span style="color:blue">18</span>
+            <br>
+            		Fizetes: <span style="color:yellow">450000</span>
+            <br>
+        </p>
+        
+    </body>
+</html>
