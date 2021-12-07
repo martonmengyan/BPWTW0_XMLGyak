@@ -2,7 +2,7 @@
 
 <?xml-stylesheet type = "text/xsl" href="students.xsl"?>
 
-<class>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<student id="01">
 		<vezeteknev>Mengyan</vezeteknev>
 		<keresztnev>Marton</keresztnev>
