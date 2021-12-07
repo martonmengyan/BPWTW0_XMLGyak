@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h2>Orarend</h2>
+        <table border="1">
+            <tr bgcolor="#375b8c">
+                <th>targy</th><th>tipus</th><th>idopont</th><th>helyszin</th><th>oktato</th><th>szak</th>
+            </tr>
+            <tr>
+                <td>Testneveles</td><td>gyakorlati</td><td>kedd-1100-1200</td><td>E4/edzoterem</td><td>Fellinger Szilvia</td><td>Programtervezo informatikus</td>
+            </tr>
+            <tr>
+                <td>Adatkezeles XML-ben</td><td>elmeleti</td><td>kedd-1200-1400</td><td>A2/I</td><td>Bednarik Laszlo</td><td>Programtervezo informatikus</td>
+            </tr>
+            <tr>
+                <td>Adatkezeles XML-ben</td><td>gyakorlati</td><td>szerda-1000-1200</td><td>Inf/202</td><td>Bednarik Laszlo</td><td>Programtervezo informatikus</td>
+            </tr>
+            <tr>
+                <td>Vallalati informacios rendszerek fejlesztese</td><td>elmeleti</td><td>szerda-1600-1800</td><td>Inf/103</td><td>Dr. Sasvari Peter Laszlo</td><td>Programtervezo informatikus</td>
+            </tr>
+            <tr>
+                <td>Vallalati informacios rendszerek fejlesztese</td><td>gyakorlati</td><td>szerda-1800-2000</td><td>Inf/103</td><td>Dr. Sasvari Peter Laszlo</td><td>Programtervezo informatikus</td>
+            </tr>
+        </table>
+    </body>
+</html>
