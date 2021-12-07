@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h2>Hallgatok adatai</h2>
+        <table border="4">
+            <tr bgcolor="#9acd32">
+                <th>Id</th><th>Vezeteknev</th><th>Keresztnev</th><th>Becenev</th><th>Fizetes</th><th>Fokozat</th>
+            </tr>
+            <tr>
+                <td>01</td><td>Mengyan</td><td>Marton</td><td>Mengyi</td><td>600000</td><td>
+										Magas
+									</td>
+            </tr>
+            <tr>
+                <td>02</td><td>Kek</td><td>Dora</td><td>Dorka</td><td>550000</td><td>
+										Magas
+									</td>
+            </tr>
+            <tr>
+                <td>03</td><td>Zsoldos</td><td>Andrea</td><td>Andi</td><td>450000</td><td>
+										Kozepes
+									</td>
+            </tr>
+        </table>
+    </body>
+</html>
